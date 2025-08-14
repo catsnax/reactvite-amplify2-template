@@ -20,7 +20,9 @@ This template serves as the base instructions on using Amplify Gen 2 to use Cogn
 
 ## Todo
 
-- customize the css of amplify gen 2 sign in/sign up button
+- customize the css of amplify gen 2 sign in/sign up button ✔️
+  - edit in App.css the classes of html components in login page
+  - ooga booga tip: use f12 view to see component names of html
 - make google provider work, oauth param not configured error ✔️
   - to enable google, add identity provider, sign in to google cloud to get client id and client secret (instructions in social and external providers)
   - edit the sign out/callback urls in login pages of App Client
