@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { getCurrentUser } from "aws-amplify/auth";
 import "@aws-amplify/ui-react/styles.css";
 import { fetchAuthSession } from "aws-amplify/auth";
+import "./App.css";
 
 async function fetchTodos() {
   const session = await fetchAuthSession();
@@ -41,7 +42,7 @@ function App() {
     <Authenticator socialProviders={["google"]}>
       {({ signOut, user }) => (
         <main>
-          <h1>Hello {user?.username}</h1>
+          <h1 className="text-red-800">Hello {user?.username}</h1>
           <button onClick={() => refetch()}> Refetch </button>
           <button onClick={signOut}>Sign out</button>
           {data && <div>{JSON.stringify(data, null, 2)}</div>}
