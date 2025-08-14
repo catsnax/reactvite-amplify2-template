@@ -4,10 +4,10 @@ This template serves as the base instructions on using Amplify Gen 2 to use Cogn
 
 ## Step 1: Install needed packages (npm install)
 
-npm create vite@latest
-npm create amplify@latest  
-npm install @tanstack/react-query (optional)
-npm install @aws-amplify/ui-react
+- npm create vite@latest
+- npm create amplify@latest
+- npm install @tanstack/react-query (optional)
+- npm install @aws-amplify/ui-react
 
 ## Step 2: Configure Amplify
 
