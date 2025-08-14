@@ -7,7 +7,7 @@ import { fetchAuthSession } from "aws-amplify/auth";
 
 async function fetchTodos() {
   const session = await fetchAuthSession();
-  const token = session.token?.idToken?.toString();
+  const token = session.tokens?.idToken?.toString();
 
   const res = await fetch(import.meta.env.VITE_API_URL, {
     headers: { Authorization: token ? `Bearer ${token}` : "" },
