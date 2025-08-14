@@ -12,7 +12,7 @@ This template serves as the base instructions on using Amplify Gen 2 to use Cogn
 ## Step 2: Configure Amplify
 
 1. Check the amplifyClient.js for the template.
-2. Cutputs can be imported and configure can also be done in App.jsx
+2. Outputs can be imported and configure can also be done in App.jsx
 
 ## Step 3: Integrate Amplify Gen 2 as Authenticator
 
