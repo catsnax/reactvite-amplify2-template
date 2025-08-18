@@ -1,17 +1,22 @@
 import { Authenticator } from "@aws-amplify/ui-react";
-import "./amplifyClient";
+import "../amplifyClient";
 import { useQuery } from "@tanstack/react-query";
 import { getCurrentUser } from "aws-amplify/auth";
 import "@aws-amplify/ui-react/styles.css";
 import { fetchAuthSession } from "aws-amplify/auth";
-import "./App.css";
+import "../App.css";
+import { createFileRoute } from "@tanstack/react-router";
+
+export const Route = createFileRoute("/")({
+  component: Index,
+});
 
 async function fetchTodos() {
   const session = await fetchAuthSession();
   const token = session.tokens?.idToken?.toString();
 
   const res = await fetch(import.meta.env.VITE_API_URL, {
-    headers: { Authorization: token ? `Bearer ${token}` : "" },
+    headers: { Authorization: token ? `Bearer ${token}` : `` },
   });
   if (!res.ok) {
     throw new Error("failed fetch");
@@ -32,7 +37,7 @@ function useItemsQuery() {
   };
 }
 
-function App() {
+function Index() {
   const { queryKey, queryFn } = useItemsQuery();
   const { data, isFetching, refetch } = useQuery({ queryKey, queryFn });
 
@@ -52,4 +57,4 @@ function App() {
   );
 }
 
-export default App;
+export default Index;
