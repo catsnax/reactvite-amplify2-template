@@ -7,6 +7,13 @@
   margin: auto;
 }
 
+/*
+[data-amplify-authenticator] {
+  margin: 2rem auto; 
+  max-width: 400px;
+}
+*/
+
 .amplify-button--primary {
   background: green;
 }
