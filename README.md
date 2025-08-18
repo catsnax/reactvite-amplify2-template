@@ -28,3 +28,5 @@ This template serves as the base instructions on using Amplify Gen 2 to use Cogn
   - edit the sign out/callback urls in login pages of App Client
   - add google as identity provider and profile in OIDC scopes in App Client
   - configure oAuth in amplify configure
+- create lambda function that automatically joins the Google provider and normal email (with the same google account)
+-
